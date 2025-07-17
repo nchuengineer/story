@@ -69,3 +69,20 @@ function filterCards() {
     filterCards();
     });
   });
+    // 顯示或隱藏「回到最上方」按鈕
+    window.addEventListener('scroll', () => {
+    const topBtn = document.getElementById('back-to-top');
+    if (document.documentElement.scrollTop > 200) {
+        topBtn.style.display = 'block';
+    } else {
+        topBtn.style.display = 'none';
+    }
+    });
+
+    // 點擊按鈕後平滑滾動回頂部
+    document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    });
