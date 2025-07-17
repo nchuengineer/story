@@ -86,3 +86,20 @@ function filterCards() {
         behavior: 'smooth'
     });
     });
+    // Pop-up 廣告出現與關閉
+    document.addEventListener('DOMContentLoaded', () => {
+    const popupOverlay = document.getElementById('popup-overlay');
+    const popupClose = document.getElementById('popup-close');
+
+    // 點右上角 X 關閉
+    popupClose.addEventListener('click', () => {
+        popupOverlay.style.display = 'none';
+    });
+
+    // 點畫面其他地方也關閉（但不要點到圖片本身）
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+        popupOverlay.style.display = 'none';
+        }
+    });
+    });
