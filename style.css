@@ -71,7 +71,7 @@
     }
     .filter-btn.active,
     .filter-btn:focus {
-    background-image: linear-gradient(135deg, #66a6ff, #89f7fe);
+    background-image: linear-gradient(25deg, #4e54c8, #db8ffb);
     color: #fff;
     border-color: rgba(255, 255, 255, 0.4);
     transform: scale(1.07);
