@@ -17,12 +17,12 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .header-buttons {
-  margin-top: 1em;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  flex-wrap: wrap;
-}
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    }
 
     .header-btn {
     display: inline-block;
@@ -59,6 +59,7 @@
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     color: #000000;
     font-weight: 500;
+    font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
