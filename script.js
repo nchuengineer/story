@@ -5,12 +5,10 @@
   let selectedType = null;
   const selectedItems = new Set();
 
-  function filterCards() {
-    if (!selectedType && selectedItems.size === 0) {
-      cards.forEach(card => card.classList.remove('hidden'));
-      return;
-    }
-
+function filterCards() {
+  if (!selectedType && selectedItems.size === 0) {
+    cards.forEach(card => card.classList.remove('hidden'));
+  } else {
     cards.forEach(card => {
       const tags = card.dataset.tags.split(' ');
       const matchType = !selectedType || tags.includes(selectedType);
@@ -18,6 +16,14 @@
       card.classList.toggle('hidden', !(matchType && matchItems));
     });
   }
+  const clearBtn = document.getElementById('clear-items');
+  if (selectedItems.size === 0) {
+    clearBtn.classList.add('active');
+  } else {
+    clearBtn.classList.remove('active');
+  }
+}
+  
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -40,6 +46,7 @@
         } else {
           selectedItems.add(tag);
           button.classList.add('active');
+          document.getElementById('clear-items').classList.remove('active');
         }
       }
 
@@ -55,6 +62,10 @@
     });
 
     // 呼叫重新篩選函式
+    filterCards();
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('clear-items').classList.add('active');
     filterCards();
     });
   });
