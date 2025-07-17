@@ -186,3 +186,32 @@
     cursor: pointer;
     z-index: 10;
     }
+    #popup-content {
+        opacity: 0;
+        transform: scale(0.8);
+        animation: popupIn 0.5s ease-out forwards;
+    }
+
+    @keyframes popupIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    }
+        /* 預設情況：桌機顯示，手機隱藏 */
+    .ad-desktop {
+    display: block;
+    }
+    .ad-mobile {
+    display: none;
+    }
+
+    /* 小螢幕情況下：手機顯示，桌機隱藏 */
+    @media screen and (max-width: 768px) {
+    .ad-desktop {
+        display: none;
+    }
+    .ad-mobile {
+        display: block;
+    }
+    }
