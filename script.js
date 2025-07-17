@@ -45,4 +45,16 @@
 
       filterCards();
     });
+        document.getElementById('clear-items').addEventListener('click', () => {
+    // 清除所有考試項目的選取標籤
+    selectedItems.clear();
+
+    // 移除所有 exam-item 按鈕的 active 樣式
+    document.querySelectorAll('.exam-item').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // 呼叫重新篩選函式
+    filterCards();
+    });
   });
