@@ -35,6 +35,20 @@
     <button class="filter-btn exam-item" data-tag="Speaking">說</button>
     <button class="filter-btn exam-item" data-tag="Writing">寫</button>
   </div>
+
+  <div class="filter-group" style="margin: 1em 0em;">
+  <label for="search-input"><strong>關鍵字搜尋：</strong></label>
+  <div style="position: relative; display: inline-block; max-width: 300px; width: 80%;">
+  <input type="text" id="search-input" placeholder="輸入關鍵字（如：寫作、IELTS、材料系）"
+    style="padding: 0.5em 2.5em 0.5em 0.75em; width: 100%; border-radius: 6px; border: 1px solid #ccc;">
+
+  <button id="clear-search" title="清除搜尋"
+    style="position: absolute; right: 0.5em; top: 50%; transform: translateY(-50%);
+           background: none; border: none; width: 1.5em; height: 1.5em;
+           cursor: pointer; font-size: 1.2em; color: #888; display: none;">✕</button>
+</div>
+  </div>
+
 </div>
 
 <div id="cards">
