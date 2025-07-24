@@ -108,6 +108,21 @@
         transform: scale(1.02);
         box-shadow: 0 12px 36px rgba(0,0,0,0.3);
     }
+    .card h3.card-heading {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding-right: 4em; /* 預留空間避免文字被編號蓋到 */
+  font-weight: bold;
+}
+    .card h3.card-heading .card-id {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.7em;
+  color: #888;         /* 灰色 */
+  font-style: italic;  /* 斜體 */
+  font-weight: normal; /* 避免過粗 */
+}
     .exam-IELTS { color: #d63384; font-weight: bold; }
     .exam-TOEFL { color: #6610f2; font-weight: bold; }
     .exam-TOEIC { color: #20c997; font-weight: bold; }
